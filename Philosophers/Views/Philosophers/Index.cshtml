@@ -9,10 +9,13 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("Index", "Philosophers", FormMethod.Get))
     {
-        <p> Name: @Html.TextBox("searchString") <br />
-        <input type="submit" value="Search"/> </p>
+        <p> 
+            Genre: @Html.DropDownList("area", "All")
+            Name: @Html.TextBox("searchString") <br />
+            <input type="submit" value="Search"/> 
+        </p>
     }
 </p>
 <table class="table">
