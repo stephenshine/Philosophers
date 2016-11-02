@@ -39,18 +39,12 @@ namespace Philosophers.Models
         [Display(Name ="Full name")]
         public string FullName
         {
-            get
-            {
-                return FirstName + " " + LastName;
-            }
+            get { return FirstName + " " + LastName; }
         }
 
         public string ImgUrl
         {
-            get
-            {
-                return PhilosopherID + "-" + LastName + ".jpg";
-            }
+            get { return PhilosopherID + "-" + LastName + ".jpg"; }
         }
     }
 }
