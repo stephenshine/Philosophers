@@ -15,8 +15,17 @@ namespace Philosophers.Controllers
         private PhilosopherDBContext db = new PhilosopherDBContext();
 
         // GET: Philosophers
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string area, string searchString)
         {
+            var AreaList = new List<string>();
+
+            var AreaQry = from p in db.Philosophers
+                          orderby p.Area
+                          select p.Area;
+
+            AreaList.AddRange(AreaQry.Distinct());
+            ViewBag.area = new SelectList(AreaList);
+
             var philosophers = from p in db.Philosophers
                                select p;
 
@@ -24,6 +33,11 @@ namespace Philosophers.Controllers
             {
                 philosophers = philosophers.Where(p => p.LastName.Contains(searchString));
             }
+            if (!String.IsNullOrEmpty(area))
+            {
+                philosophers = philosophers.Where(p => p.Area == area);
+            }
+
             return View(philosophers);
         }
 
