@@ -36,9 +36,4 @@ namespace Philosophers.Models
         [Required, StringLength(500, MinimumLength = 20)]
         public string Description { get; set; }
     }
-
-    public class PhilosopherDBContext : DbContext
-    {
-        public DbSet<Philosopher> Philosophers { get; set; }
-    }
 }
