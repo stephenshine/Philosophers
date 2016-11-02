@@ -35,5 +35,22 @@ namespace Philosophers.Models
 
         [Required, StringLength(500, MinimumLength = 20)]
         public string Description { get; set; }
+
+        [Display(Name ="Full name")]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
+
+        public string ImgUrl
+        {
+            get
+            {
+                return PhilosopherID + "-" + LastName + ".jpg";
+            }
+        }
     }
 }
