@@ -11,6 +11,7 @@ namespace Philosophers.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(Philosophers.Models.PhilosopherDBContext context)
@@ -45,17 +46,18 @@ namespace Philosophers.Migrations
                     Nationality = "American",
                     AreaID = 3,
                     Description = "Here's some text about John Rawls"
-                },
-                new Philosopher
-                {
-                    FirstName = "Rene",
-                    LastName = "Descartes",
-                    DateOfBirth = DateTime.Parse("1596-02-31"),
-                    DateOfDeath = DateTime.Parse("1650-02-11"),
-                    Nationality = "French",
-                    AreaID = 2,
-                    Description = "Here's some text about Rene Descartes"
-                });
+                }
+                //new Philosopher
+                //{
+                //    FirstName = "Rene",
+                //    LastName = "Descartes",
+                //    DateOfBirth = DateTime.Parse("1596-02-31"),
+                //    DateOfDeath = DateTime.Parse("1650-02-11"),
+                //    Nationality = "French",
+                //    AreaID = 2,
+                //    Description = "Here's some text about Rene Descartes"
+                //}
+                );
 
             context.Areas.AddOrUpdate(a => a.Name,
                 new Area { Name = "Logic" },
