@@ -19,11 +19,11 @@ namespace Philosophers.Controllers
         {
             var AreaList = new List<string>();
 
-            var AreaQry = from p in db.Philosophers
-                          orderby p.Area
-                          select p.Area;
+            //var AreaQry = from p in db.Philosophers
+            //              orderby p.Area
+            //              select p.Area;
 
-            AreaList.AddRange(AreaQry.Distinct());
+            //AreaList.AddRange(AreaQry.Distinct());
             ViewBag.area = new SelectList(AreaList);
 
             var philosophers = from p in db.Philosophers
@@ -33,10 +33,10 @@ namespace Philosophers.Controllers
             {
                 philosophers = philosophers.Where(p => p.LastName.Contains(searchString));
             }
-            if (!String.IsNullOrEmpty(area))
-            {
-                philosophers = philosophers.Where(p => p.Area == area);
-            }
+            //if (!String.IsNullOrEmpty(area))
+            //{
+            //    philosophers = philosophers.Where(p => p.Area == area);
+            //}
 
             return View(philosophers);
         }

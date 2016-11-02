@@ -27,13 +27,15 @@ namespace Philosophers.Models
         public DateTime DateOfDeath { get; set; }
 
         [Required]
-        public string Area { get; set; }
+        public int AreaID { get; set; }
 
         [Required]
         public string Nationality { get; set; }
 
         [Required, StringLength(500, MinimumLength = 20)]
         public string Description { get; set; }
+
+        public virtual Area Area { get; set; }
 
         [Display(Name ="Full name")]
         public string FullName
