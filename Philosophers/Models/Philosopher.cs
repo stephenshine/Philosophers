@@ -12,20 +12,14 @@ namespace Philosophers.Models
     {
         public int PhilosopherID { get; set; }
 
-        [Display(Name = "First Name")]
-        [StringLength(25, MinimumLength = 3)]
-        [Required]
+        [Required, Display(Name = "First Name"), StringLength(25, MinimumLength = 3)]
         public string FirstName { get; set; }
 
-        [Display(Name = "Last Name")]
-        [StringLength(30, MinimumLength = 4)]
-        [Required]
+        [Required, Display(Name = "Last Name"), StringLength(30, MinimumLength = 4)]
         public string LastName { get; set; }
 
-        [Display(Name = "Date of birth")]
-        [DataType(DataType.Date)]
+        [Required, Display(Name = "Date of birth"), DataType(DataType.Date)]
         [Column(TypeName="datetime2")]
-        [Required]
         public DateTime DateOfBirth { get; set; }
 
         [Display(Name = "Date of death")]
@@ -39,8 +33,7 @@ namespace Philosophers.Models
         [Required]
         public string Nationality { get; set; }
 
-        [StringLength(500, MinimumLength = 20)]
-        [Required]
+        [Required, StringLength(500, MinimumLength = 20)]
         public string Description { get; set; }
     }
 
