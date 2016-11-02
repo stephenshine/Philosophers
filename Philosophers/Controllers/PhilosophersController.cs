@@ -15,9 +15,16 @@ namespace Philosophers.Controllers
         private PhilosopherDBContext db = new PhilosopherDBContext();
 
         // GET: Philosophers
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Philosophers.ToList());
+            var philosophers = from p in db.Philosophers
+                               select p;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                philosophers = philosophers.Where(p => p.LastName.Contains(searchString));
+            }
+            return View(philosophers);
         }
 
         // GET: Philosophers/Details/5
