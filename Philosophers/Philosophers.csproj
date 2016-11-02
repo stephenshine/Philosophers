@@ -137,6 +137,10 @@
     <Compile Include="Migrations\201611022109051_Initial.Designer.cs">
       <DependentUpon>201611022109051_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611022118523_DataAnnotations.cs" />
+    <Compile Include="Migrations\201611022118523_DataAnnotations.Designer.cs">
+      <DependentUpon>201611022118523_DataAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Philosopher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,6 +201,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611022109051_Initial.resx">
       <DependentUpon>201611022109051_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611022118523_DataAnnotations.resx">
+      <DependentUpon>201611022118523_DataAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
