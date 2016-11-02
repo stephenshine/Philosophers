@@ -26,7 +26,7 @@ namespace Philosophers.Controllers
             //AreaList.AddRange(AreaQry.Distinct());
             ViewBag.area = new SelectList(AreaList);
 
-            var philosophers = from p in db.Philosophers
+            var philosophers = from p in db.Philosophers.Include("Area")
                                select p;
 
             if (!String.IsNullOrEmpty(searchString))
