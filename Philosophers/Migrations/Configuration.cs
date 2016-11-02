@@ -23,7 +23,7 @@ namespace Philosophers.Migrations
                     DateOfBirth = DateTime.Parse("1872-05-18"),
                     DateOfDeath = DateTime.Parse("1970-02-02"),
                     Nationality = "English",
-                    Area = "Logic",
+                    AreaID = 1,
                     Description = "Here's some text about Bertrand Russell"
                 },
                 new Philosopher
@@ -33,7 +33,7 @@ namespace Philosophers.Migrations
                     DateOfBirth = DateTime.Parse("1724-04-22"),
                     DateOfDeath = DateTime.Parse("1804-02-12"),
                     Nationality = "German",
-                    Area = "Metaphysics",
+                    AreaID = 2,
                     Description = "Here's some text about Immanuel Kant"
                 },
                 new Philosopher
@@ -43,7 +43,7 @@ namespace Philosophers.Migrations
                     DateOfBirth = DateTime.Parse("1921-02-21"),
                     DateOfDeath = DateTime.Parse("2002-11-24"),
                     Nationality = "American",
-                    Area = "Political philosophy",
+                    AreaID = 3,
                     Description = "Here's some text about John Rawls"
                 },
                 new Philosopher
@@ -53,9 +53,14 @@ namespace Philosophers.Migrations
                     DateOfBirth = DateTime.Parse("1596-02-31"),
                     DateOfDeath = DateTime.Parse("1650-02-11"),
                     Nationality = "French",
-                    Area = "Metaphysics",
+                    AreaID = 2,
                     Description = "Here's some text about Rene Descartes"
                 });
+
+            context.Areas.AddOrUpdate(a => a.Name,
+                new Area { Name = "Logic" },
+                new Area { Name = "Metaphysics" },
+                new Area { Name = "Political philosophy" });
         }
     }
 }

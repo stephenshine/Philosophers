@@ -9,7 +9,7 @@ namespace Philosophers.Models
     public class Area
     {
         public int AreaId { get; set; }
-        public int Name { get; set; }
+        public string Name { get; set; }
 
         public virtual ICollection<Philosopher> Philosophers { get; set; }
     }

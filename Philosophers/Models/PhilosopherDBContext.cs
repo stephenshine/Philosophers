@@ -9,5 +9,6 @@ namespace Philosophers.Models
     public class PhilosopherDBContext : DbContext
     {
         public DbSet<Philosopher> Philosophers { get; set; }
+        public DbSet<Area> Areas { get; set; }
     }
 }
