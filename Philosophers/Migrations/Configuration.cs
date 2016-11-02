@@ -45,6 +45,16 @@ namespace Philosophers.Migrations
                     Nationality = "American",
                     Area = "Political philosophy",
                     Description = "Here's some text about John Rawls"
+                },
+                new Philosopher
+                {
+                    FirstName = "Rene",
+                    LastName = "Descartes",
+                    DateOfBirth = DateTime.Parse("1596-02-31"),
+                    DateOfDeath = DateTime.Parse("1650-02-11"),
+                    Nationality = "French",
+                    Area = "Metaphysics",
+                    Description = "Here's some text about Rene Descartes"
                 });
         }
     }
