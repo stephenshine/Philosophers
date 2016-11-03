@@ -14,20 +14,14 @@ namespace Philosophers.Controllers
     {
         private PhilosopherDBContext db = new PhilosopherDBContext();
 
-        public ActionResult Index(string AreaID, string searchString)
+        public ActionResult Index(string searchString)
         {
-            PopulateAreaList();
-
             var philosophers = from p in db.Philosophers.Include("Area")
                                select p;
 
             if (!String.IsNullOrEmpty(searchString))
             {
                 philosophers = philosophers.Where(p => p.LastName.Contains(searchString));
-            }
-            if (!String.IsNullOrEmpty(AreaID))
-            {
-                philosophers = philosophers.Where(p => p.Area.Name == AreaID);
             }
 
             return View(philosophers);
