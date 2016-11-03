@@ -30,7 +30,7 @@ namespace Philosophers.Models
         public int AreaID { get; set; }
 
         [Required, Display(Name = "Nationality")]
-        public string NationalityID { get; set; }
+        public int NationalityID { get; set; }
 
         [Required, StringLength(500, MinimumLength = 20)]
         public string Description { get; set; }

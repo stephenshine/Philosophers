@@ -23,7 +23,7 @@ namespace Philosophers.Migrations
                     LastName = "Russell",
                     DateOfBirth = DateTime.Parse("1872-05-18"),
                     DateOfDeath = DateTime.Parse("1970-02-02"),
-                    Nationality = "English",
+                    NationalityID = 1,
                     AreaID = 1,
                     Description = "Here's some text about Bertrand Russell"
                 },
@@ -33,7 +33,7 @@ namespace Philosophers.Migrations
                     LastName = "Kant",
                     DateOfBirth = DateTime.Parse("1724-04-22"),
                     DateOfDeath = DateTime.Parse("1804-02-12"),
-                    Nationality = "German",
+                    NationalityID = 3,
                     AreaID = 2,
                     Description = "Here's some text about Immanuel Kant"
                 },
@@ -43,7 +43,7 @@ namespace Philosophers.Migrations
                     LastName = "Rawls",
                     DateOfBirth = DateTime.Parse("1921-02-21"),
                     DateOfDeath = DateTime.Parse("2002-11-24"),
-                    Nationality = "American",
+                    NationalityID = 9,
                     AreaID = 3,
                     Description = "Here's some text about John Rawls"
                 }
@@ -69,6 +69,19 @@ namespace Philosophers.Migrations
                 new Area { Name = "Aesthetics" },
                 new Area { Name = "Social philosophy" },
                 new Area { Name = "Epistemology" });
+
+            context.Nationalities.AddOrUpdate(n => n.Name, 
+                new Nationality { Name = "English" },
+                new Nationality { Name = "Scottish" },
+                new Nationality { Name = "German" },
+                new Nationality { Name = "French" },
+                new Nationality { Name = "Greek" },
+                new Nationality { Name = "Italian" },
+                new Nationality { Name = "Spanish" },
+                new Nationality { Name = "Russian" },
+                new Nationality { Name = "American" }
+
+                );
         }
     }
 }

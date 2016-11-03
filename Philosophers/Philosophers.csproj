@@ -141,6 +141,10 @@
     <Compile Include="Migrations\201611022118523_DataAnnotations.Designer.cs">
       <DependentUpon>201611022118523_DataAnnotations.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611032211115_Nationalities.cs" />
+    <Compile Include="Migrations\201611032211115_Nationalities.Designer.cs">
+      <DependentUpon>201611032211115_Nationalities.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Area.cs" />
     <Compile Include="Models\Nationality.cs" />
@@ -207,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611022118523_DataAnnotations.resx">
       <DependentUpon>201611022118523_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611032211115_Nationalities.resx">
+      <DependentUpon>201611032211115_Nationalities.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
