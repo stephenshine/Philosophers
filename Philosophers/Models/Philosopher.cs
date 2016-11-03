@@ -24,7 +24,16 @@ namespace Philosophers.Models
         [Display(Name = "Date of death")]
         [DataType(DataType.Date)]
         [Column(TypeName = "datetime2")]
-        public DateTime DateOfDeath { get; set; }
+        public DateTime DateOfDeath {
+            get
+            {
+                return dateOfDeath.HasValue ? dateOfDeath.Value : DateTime.Now;
+            }
+            set
+            {
+                dateOfDeath = value;
+            }
+        }
 
         [Required, Display(Name = "Area")]
         public int AreaID { get; set; }
@@ -48,5 +57,7 @@ namespace Philosophers.Models
         {
             get { return PhilosopherID + "-" + LastName + ".jpg"; }
         }
+
+        private DateTime? dateOfDeath = null;
     }
 }
