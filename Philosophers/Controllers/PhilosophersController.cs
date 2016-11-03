@@ -123,6 +123,15 @@ namespace Philosophers.Controllers
             ViewBag.AreaID = new SelectList(areaQuery, "AreaId", "Name", selectedArea);
         }
 
+        private void PopulateNationalityList(object selectedNationality = null)
+        {
+            var nationalityQuery = from n in db.Nationalities
+                                   orderby n.Name
+                                   select n;
+
+            ViewBag.NationalityID = new SelectList(nationalityQuery, "NationalityID", "Name", selectedNationality);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
