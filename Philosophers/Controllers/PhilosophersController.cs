@@ -119,12 +119,18 @@ namespace Philosophers.Controllers
             return RedirectToAction("Index");
         }
 
+
+        // methods to populate dropdown lists with data from tables
+        // takes one argument which is used to pre-select item in list.
         private void PopulateAreaList(object selectedArea = null)
         {
+
+            // LINQ query to get all areas from table
             var areaQuery = from a in db.Areas
                             orderby a.Name
                             select a;
 
+            // Query is run here - SelectList(collection, valueField, textField, selectedValue) 
             ViewBag.AreaID = new SelectList(areaQuery, "AreaId", "Name", selectedArea);
         }
 
