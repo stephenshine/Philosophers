@@ -62,7 +62,13 @@ namespace Philosophers.Migrations
             context.Areas.AddOrUpdate(a => a.Name,
                 new Area { Name = "Logic" },
                 new Area { Name = "Metaphysics" },
-                new Area { Name = "Political philosophy" });
+                new Area { Name = "Political philosophy" },
+                new Area { Name = "Existenalism" }, 
+                new Area { Name = "Philosophy of the mind" },
+                new Area { Name = "Moral philosophy" },
+                new Area { Name = "Aesthetics" },
+                new Area { Name = "Social philosophy" },
+                new Area { Name = "Epistemology" });
         }
     }
 }
