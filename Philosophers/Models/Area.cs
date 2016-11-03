@@ -11,7 +11,7 @@ namespace Philosophers.Models
     {
         public int AreaId { get; set; }
         
-        [Display(Name = "Area"}]
+        [Display(Name = "Area")]
         public string Name { get; set; }
 
         public virtual ICollection<Philosopher> Philosophers { get; set; }
