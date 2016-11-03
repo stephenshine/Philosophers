@@ -54,7 +54,7 @@ namespace Philosophers.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,Area,Nationality,Description")] Philosopher philosopher)
+        public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,Nationality,Description")] Philosopher philosopher)
         {
             if (ModelState.IsValid)
             {
@@ -63,6 +63,7 @@ namespace Philosophers.Controllers
                 return RedirectToAction("Index");
             }
 
+            PopulateAreaList(philosopher.AreaID);
             return View(philosopher);
         }
 
@@ -78,12 +79,10 @@ namespace Philosophers.Controllers
             {
                 return HttpNotFound();
             }
+            PopulateAreaList(philosopher.AreaID);
             return View(philosopher);
         }
 
-        // POST: Philosophers/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,Area,Nationality,Description")] Philosopher philosopher)
