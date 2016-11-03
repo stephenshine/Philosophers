@@ -46,12 +46,13 @@ namespace Philosophers.Controllers
         public ActionResult Create()
         {
             PopulateAreaList();
+            PopulateNationalityList();
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,Nationality,Description")] Philosopher philosopher)
+        public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,NationalityID,Description")] Philosopher philosopher)
         {
             if (ModelState.IsValid)
             {
@@ -61,6 +62,7 @@ namespace Philosophers.Controllers
             }
 
             PopulateAreaList(philosopher.AreaID);
+            PopulateNationalityList(philosopher.NationalityID);
             return View(philosopher);
         }
 
@@ -76,12 +78,13 @@ namespace Philosophers.Controllers
                 return HttpNotFound();
             }
             PopulateAreaList(philosopher.AreaID);
+            PopulateNationalityList(philosopher.NationalityID);
             return View(philosopher);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,Nationality,Description")] Philosopher philosopher)
+        public ActionResult Edit([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,NationalityID,Description")] Philosopher philosopher)
         {
             if (ModelState.IsValid)
             {
