@@ -51,6 +51,7 @@ namespace Philosophers.Controllers
         // GET: Philosophers/Create
         public ActionResult Create()
         {
+            PopulateAreaList();
             return View();
         }
 
