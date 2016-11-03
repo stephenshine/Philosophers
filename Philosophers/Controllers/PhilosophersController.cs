@@ -85,7 +85,7 @@ namespace Philosophers.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,Area,Nationality,Description")] Philosopher philosopher)
+        public ActionResult Edit([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,Nationality,Description")] Philosopher philosopher)
         {
             if (ModelState.IsValid)
             {
