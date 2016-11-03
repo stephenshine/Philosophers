@@ -136,6 +136,15 @@ namespace Philosophers.Controllers
             return RedirectToAction("Index");
         }
 
+        private void PopulateAreaList(object selectedArea = null)
+        {
+            var areaQuery = from a in db.Areas
+                            orderby a.Name
+                            select a;
+
+            ViewBag.AreaID = new SelectList(areaQuery, "AreaId", "Name", selectedArea);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
