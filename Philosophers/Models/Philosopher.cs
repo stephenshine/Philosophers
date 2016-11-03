@@ -29,13 +29,14 @@ namespace Philosophers.Models
         [Required, Display(Name = "Area")]
         public int AreaID { get; set; }
 
-        [Required]
-        public string Nationality { get; set; }
+        [Required, Display(Name = "Nationality")]
+        public string NationalityID { get; set; }
 
         [Required, StringLength(500, MinimumLength = 20)]
         public string Description { get; set; }
 
         public virtual Area Area { get; set; }
+        public virtual Nationality Nationality { get; set; }
 
         [Display(Name ="Full name")]
         public string FullName
