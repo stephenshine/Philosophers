@@ -46,17 +46,17 @@ namespace Philosophers.Migrations
                     NationalityID = 9,
                     AreaID = 3,
                     Description = "Here's some text about John Rawls"
+                },
+                new Philosopher
+                {
+                    FirstName = "Rene",
+                    LastName = "Descartes",
+                    DateOfBirth = DateTime.Parse("1596-03-31"),
+                    DateOfDeath = DateTime.Parse("1650-02-11"),
+                    NationalityID = 4,
+                    AreaID = 2,
+                    Description = "Here's some text about Rene Descartes"
                 }
-                //new Philosopher
-                //{
-                //    FirstName = "Rene",
-                //    LastName = "Descartes",
-                //    DateOfBirth = DateTime.Parse("1596-02-31"),
-                //    DateOfDeath = DateTime.Parse("1650-02-11"),
-                //    Nationality = "French",
-                //    AreaID = 2,
-                //    Description = "Here's some text about Rene Descartes"
-                //}
                 );
 
             context.Areas.AddOrUpdate(a => a.Name,
