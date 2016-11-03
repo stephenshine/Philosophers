@@ -27,7 +27,6 @@ namespace Philosophers.Controllers
             return View(philosophers);
         }
 
-        // GET: Philosophers/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -42,16 +41,12 @@ namespace Philosophers.Controllers
             return View(philosopher);
         }
 
-        // GET: Philosophers/Create
         public ActionResult Create()
         {
             PopulateAreaList();
             return View();
         }
 
-        // POST: Philosophers/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,Nationality,Description")] Philosopher philosopher)
@@ -67,7 +62,6 @@ namespace Philosophers.Controllers
             return View(philosopher);
         }
 
-        // GET: Philosophers/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -96,7 +90,6 @@ namespace Philosophers.Controllers
             return View(philosopher);
         }
 
-        // GET: Philosophers/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,7 +104,6 @@ namespace Philosophers.Controllers
             return View(philosopher);
         }
 
-        // POST: Philosophers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
