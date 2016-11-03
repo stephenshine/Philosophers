@@ -56,6 +56,15 @@ namespace Philosophers.Migrations
                     NationalityID = 4,
                     AreaID = 2,
                     Description = "Here's some text about Rene Descartes"
+                },
+                new Philosopher
+                {
+                    FirstName = "David",
+                    LastName = "Chalmers",
+                    DateOfBirth = DateTime.Parse("1966-04-20"),
+                    NationalityID = 10,
+                    AreaID = 5,
+                    Description = "Here's some text about David Chalmers"
                 }
                 );
 
@@ -79,7 +88,8 @@ namespace Philosophers.Migrations
                 new Nationality { Name = "Italian" },
                 new Nationality { Name = "Spanish" },
                 new Nationality { Name = "Russian" },
-                new Nationality { Name = "American" });
+                new Nationality { Name = "American" },
+                new Nationality { Name = "Australian" });
         }
     }
 }
