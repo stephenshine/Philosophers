@@ -16,7 +16,9 @@ namespace Philosophers.Controllers
 
         public ActionResult Index(string searchString)
         {
-            var philosophers = from p in db.Philosophers.Include("Area")
+            var philosophers = from p in db.Philosophers
+                               .Include("Area")
+                               .Include("Nationality")
                                select p;
 
             if (!String.IsNullOrEmpty(searchString))
