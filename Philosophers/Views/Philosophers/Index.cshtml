@@ -12,7 +12,7 @@
     @using (Html.BeginForm("Index", "Philosophers", FormMethod.Get))
     {
         <p> 
-            Genre: @Html.DropDownList("area", "All")
+            Genre: @Html.DropDownList("AreaID", "All")
             Name: @Html.TextBox("searchString") <br />
             <input type="submit" value="Search"/> 
         </p>
