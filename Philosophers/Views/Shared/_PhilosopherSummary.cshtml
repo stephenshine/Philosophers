@@ -1,0 +1,10 @@
+﻿@model Philosophers.Models.Philosopher
+
+<div class="col-md-3">
+    <a href="@Url.Action("Details", new { id = Model.PhilosopherID })">
+        <img src="~/Content/Images/@Model.ImgUrl"
+             alt="No image found"
+             class="img-responsive" />
+    </a>
+    <h4>@Html.ActionLink(Model.FullName, "Details", new { id = Model.PhilosopherID })</h4>
+</div>

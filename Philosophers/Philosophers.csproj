@@ -192,6 +192,7 @@
     <Content Include="Views\Philosophers\Details.cshtml" />
     <Content Include="Views\Philosophers\Edit.cshtml" />
     <Content Include="Views\Philosophers\Index.cshtml" />
+    <Content Include="Views\Shared\_PhilosopherSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -73,13 +73,6 @@
 <div class="row">
     @foreach (var philosopher in Model)
     {
-        <div class="col-md-3">
-            <a href="@Url.Action("Details", new { id = philosopher.PhilosopherID })">
-                <img src="~/Content/Images/@philosopher.ImgUrl"
-                        alt="No image found"
-                        class="img-responsive" />
-            </a> 
-            <h4>@Html.ActionLink(philosopher.FullName, "Details", new { id = philosopher.PhilosopherID })</h4>
-        </div>
+        Html.RenderPartial("_PhilosopherSummary", philosopher);
     }
 </div>
