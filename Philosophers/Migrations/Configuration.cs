@@ -79,9 +79,7 @@ namespace Philosophers.Migrations
                 new Nationality { Name = "Italian" },
                 new Nationality { Name = "Spanish" },
                 new Nationality { Name = "Russian" },
-                new Nationality { Name = "American" }
-
-                );
+                new Nationality { Name = "American" });
         }
     }
 }
