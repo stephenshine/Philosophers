@@ -10,5 +10,6 @@ namespace Philosophers.Models
     {
         public DbSet<Philosopher> Philosophers { get; set; }
         public DbSet<Area> Areas { get; set; }
+        public DbSet<Nationality> Nationalities { get; set; }
     }
 }
