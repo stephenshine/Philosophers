@@ -65,6 +65,16 @@ namespace Philosophers.Migrations
                     NationalityID = 10,
                     AreaID = 5,
                     Description = "Here's some text about David Chalmers"
+                },
+                new Philosopher 
+                {
+                    FirstName = "John",
+                    LastName = "Locke",
+                    DateOfBirth = DateTime.Parse("1632-08-29"),
+                    DateOfDeath = DateTime.Parse("1704-10-28"),
+                    NationalityID = 1,
+                    AreaID = 2,
+                    Description = "Here's some text about John Locke"
                 }
                 );
 
