@@ -75,6 +75,36 @@ namespace Philosophers.Migrations
                     NationalityID = 1,
                     AreaID = 2,
                     Description = "Here's some text about John Locke"
+                },
+                new Philosopher
+                {
+                    FirstName = "Jean-Paul",
+                    LastName = "Sartre",
+                    DateOfBirth = DateTime.Parse("1905-06-21"),
+                    DateOfDeath = DateTime.Parse("1980-04-15"),
+                    NationalityID = 4,
+                    AreaID = 4,
+                    Description = "Here's some text about John-Paul Sartre"
+                },
+                new Philosopher
+                {
+                    FirstName = "Thomas",
+                    LastName = "Hobbes",
+                    DateOfBirth = DateTime.Parse("1588-04-05"),
+                    DateOfDeath = DateTime.Parse("1670-12-04"),
+                    NationalityID = 1,
+                    AreaID = 3,
+                    Description = "Here's some text about Thomas Hobbes"
+                },
+                new Philosopher
+                {
+                    FirstName = "Friedrich",
+                    LastName = "Nietzsche",
+                    DateOfBirth = DateTime.Parse("1844-10-15"),
+                    DateOfDeath = DateTime.Parse("1900-08-25"),
+                    NationalityID = 8,
+                    AreaID = 2,
+                    Description = "Here's some text about Friedrich Nietzsche"
                 }
                 );
 
