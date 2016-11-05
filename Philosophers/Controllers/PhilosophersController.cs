@@ -29,13 +29,16 @@ namespace Philosophers.Controllers
             return View(philosophers);
         }
 
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Philosopher philosopher = db.Philosophers.Find(id);
+            var philosopher = (from p in db.Philosophers
+                                      .Include("Area").Include("Nationality")
+                                      where p.LastName == id
+                                      select p).Single();
             if (philosopher == null)
             {
                 return HttpNotFound();
