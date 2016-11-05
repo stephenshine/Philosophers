@@ -14,9 +14,15 @@ namespace Philosophers
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Details",
+                url: "Philosphers/Details/{lastName}",
+                defaults: new { controller = "Philosophers", action = "Details", lastName = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Philosophers", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

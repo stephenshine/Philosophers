@@ -29,15 +29,15 @@ namespace Philosophers.Controllers
             return View(philosophers);
         }
 
-        public ActionResult Details(string id)
+        public ActionResult Details(string lastName)
         {
-            if (id == null)
+            if (lastName == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var philosopher = (from p in db.Philosophers
                                       .Include("Area").Include("Nationality")
-                                      where p.LastName == id
+                                      where p.LastName == lastName
                                       select p).Single();
             if (philosopher == null)
             {
