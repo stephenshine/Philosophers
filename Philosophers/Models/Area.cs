@@ -13,7 +13,7 @@ namespace Philosophers.Models
         
         [Display(Name = "Area")]
         public string Name { get; set; }
-        public string Descrpition { get; set; }
+        public string Description { get; set; }
 
         public virtual ICollection<Philosopher> Philosophers { get; set; }
         public virtual ICollection<Book> Books { get; set; }

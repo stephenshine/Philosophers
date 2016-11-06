@@ -109,15 +109,15 @@ namespace Philosophers.Migrations
                 );
 
             context.Areas.AddOrUpdate(a => a.Name,
-                new Area { Name = "Logic", Descrpition = "The systematic study of the form of arguments." },
-                new Area { Name = "Metaphysics", Descrpition = "Investigates the fundamental nature of being and the world." },
-                new Area { Name = "Political philosophy", Descrpition = "The study of politics, liberty and justice and the enforcement of the legal code." },
-                new Area { Name = "Existenalism", Descrpition = "The idea that philosophy involves acting, feeling and the living individual." }, 
-                new Area { Name = "Philosophy of the mind", Descrpition = "The study of the mind, mental events, mental functions and consciousness in relation to the physical body." },
-                new Area { Name = "Moral philosophy", Descrpition = "Systemizing, defending and recommending concepts of right and wrong conduct." },
-                new Area { Name = "Aesthetics", Descrpition = "Deals with the creation and appreciation of art and beauty." },
-                new Area { Name = "Social philosophy", Descrpition = "The study of social behaviour and interpretations of society and social institutions." },
-                new Area { Name = "Epistemology", Descrpition = "The study of the nature of knowledge, the rationality of belief, and justification." });
+                new Area { Name = "Logic", Description = "The systematic study of the form of arguments." },
+                new Area { Name = "Metaphysics", Description = "Investigates the fundamental nature of being and the world." },
+                new Area { Name = "Political philosophy", Description = "The study of politics, liberty and justice and the enforcement of the legal code." },
+                new Area { Name = "Existenalism", Description = "The idea that philosophy involves acting, feeling and the living individual." }, 
+                new Area { Name = "Philosophy of the mind", Description = "The study of the mind, mental events, mental functions and consciousness in relation to the physical body." },
+                new Area { Name = "Moral philosophy", Description = "Systemizing, defending and recommending concepts of right and wrong conduct." },
+                new Area { Name = "Aesthetics", Description = "Deals with the creation and appreciation of art and beauty." },
+                new Area { Name = "Social philosophy", Description = "The study of social behaviour and interpretations of society and social institutions." },
+                new Area { Name = "Epistemology", Description = "The study of the nature of knowledge, the rationality of belief, and justification." });
 
             context.Nationalities.AddOrUpdate(n => n.Name, 
                 new Nationality { Name = "English" },
