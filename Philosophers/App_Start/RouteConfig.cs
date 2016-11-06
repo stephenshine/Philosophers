@@ -20,6 +20,12 @@ namespace Philosophers
             );
 
             routes.MapRoute(
+                name: "Areas",
+                url: "Philosphers/Areas/{areaName}",
+                defaults: new { controller = "Philosophers", action = "Areas", areaName = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Philosophers", action = "Index", id = UrlParameter.Optional }

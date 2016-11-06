@@ -191,11 +191,11 @@
     <Content Include="Views\Philosophers\Edit.cshtml" />
     <Content Include="Views\Philosophers\Index.cshtml" />
     <Content Include="Views\Shared\_PhilosopherSummary.cshtml" />
+    <Content Include="Views\Areas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\" />
-    <Folder Include="Views\Areas\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
