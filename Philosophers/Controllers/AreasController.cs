@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Philosophers.Models;
+using System.Net;
 
 namespace Philosophers.Controllers
 {
@@ -11,18 +12,30 @@ namespace Philosophers.Controllers
     {
         PhilosopherDBContext db = new PhilosopherDBContext();
 
-        public ActionResult Index(string areaName)
+        public ActionResult Index()
         {
             var areas = from a in db.Areas
                         .Include("Philosophers")
+                        orderby a.Name
                         select a;
 
-            if (!String.IsNullOrEmpty(areaName))
+            return View(areas);
+        }
+
+        public ActionResult Details(int? areaName)
+        {
+            if (areaName == null)
             {
-                areas = areas.Where(a => a.Name == areaName);
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            var area = db.Areas.Find(areaName);
+
+            if (area == null)
+            {
+                return HttpNotFound();
             }
 
-            return View(areas);
+            return View(area);
         }
 
 
