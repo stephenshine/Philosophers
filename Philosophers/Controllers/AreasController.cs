@@ -28,7 +28,9 @@ namespace Philosophers.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var area = db.Areas.Find(areaName);
+            var area = (from a in db.Areas.Include("Philosophers")
+                       where a.AreaId == areaName
+                       select a).Single();
 
             if (area == null)
             {
