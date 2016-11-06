@@ -37,6 +37,7 @@ namespace Philosophers.Models
 
         public virtual Area Area { get; set; }
         public virtual Nationality Nationality { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
 
         [Display(Name ="Full name")]
         public string FullName
