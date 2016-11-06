@@ -5,7 +5,7 @@
 }
 
 <h2>@Model.FullName</h2>
-<h4>@Model.Area.Name</h4>
+<h4>@Html.ActionLink(Model.Area.Name, "Details", "Areas", new { areaName = Model.Area.Name }, null)</h4>
 
 <div class="row">
     <div class="col-md-6>
