@@ -12,5 +12,15 @@ namespace Philosophers.Models
         public DbSet<Area> Areas { get; set; }
         public DbSet<Nationality> Nationalities { get; set; }
         public DbSet<Book> Books { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Book>()
+                .HasOptional(b => b.Philosopher)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+        }
     }
 }

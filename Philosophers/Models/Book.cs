@@ -12,10 +12,10 @@ namespace Philosophers.Models
 
         [StringLength(100)]
         public string Title { get; set; }
-        public int AreaID { get; set; }
         public int PhilosopherID { get; set; }
+        public int AreaID { get; set; }
 
-        public virtual Area Area { get; set; }
         public virtual Philosopher Philosopher { get; set; }
+        public virtual Area Area { get; set; }
     }
 }
