@@ -5,7 +5,15 @@
 }
 
 <h2>Index</h2>
-
+<div>
+    @using (Html.BeginForm("Details", "Areas", FormMethod.Get))
+    {
+        <p>
+            Area: @Html.DropDownList("AreaID", "")
+            <input type="submit" value="filter" />
+        </p>
+    }
+</div>
 <table class="table">
     <tr>
         <th>
