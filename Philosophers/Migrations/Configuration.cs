@@ -131,7 +131,7 @@ namespace Philosophers.Migrations
                 new Nationality { Name = "American" },
                 new Nationality { Name = "Australian" });
 
-            context.Books.AddOrUpdate(b => b.BookID,
+            context.Books.AddOrUpdate(b => b.Title,
                 new Book { Title = "test1", AreaID = 1},
                 new Book { Title = "test2", AreaID = 2 },
                 new Book { Title = "test2b", AreaID = 2 });
