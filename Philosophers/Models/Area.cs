@@ -16,5 +16,6 @@ namespace Philosophers.Models
         public string Description { get; set; }
 
         public virtual ICollection<Philosopher> Philosophers { get; set; }
+        public virtual ICollection<Book> Books { get; set; }
     }
 }
