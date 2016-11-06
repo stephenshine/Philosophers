@@ -29,7 +29,8 @@ namespace Philosophers.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var area = (from a in db.Areas.Include("Philosophers")
+            var area = (from a in db.Areas
+                       .Include("Philosophers").Include("Books")
                        where a.Name.Equals(areaName)
                        select a).SingleOrDefault();
 
