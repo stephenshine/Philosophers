@@ -23,14 +23,14 @@ namespace Philosophers.Controllers
             return View(areas);
         }
 
-        public ActionResult Details(int? AreaId)
+        public ActionResult Details(string areaName)
         {
-            if (AreaId == null)
+            if (areaName == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var area = (from a in db.Areas.Include("Philosophers")
-                       where a.AreaId == AreaId
+                       where a.Name.Equals(areaName)
                        select a).SingleOrDefault();
 
             if (area == null)
@@ -52,7 +52,7 @@ namespace Philosophers.Controllers
                             select a;
 
             // Query is run here - SelectList(collection, valueField, textField, selectedValue) 
-            ViewBag.AreaID = new SelectList(areaQuery, "AreaId", "Name", selectedArea);
+            ViewBag.areaName = new SelectList(areaQuery, "Name", "Name", selectedArea);
         }
 
         protected override void Dispose(bool disposing)

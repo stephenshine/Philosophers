@@ -9,7 +9,7 @@
     @using (Html.BeginForm("Details", "Areas", FormMethod.Get))
     {
         <p>
-            Area: @Html.DropDownList("AreaID", "")
+            Area: @Html.DropDownList("areaName", "Select an area")
             <input type="submit" value="filter" />
         </p>
     }
