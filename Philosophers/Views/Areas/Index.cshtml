@@ -1,17 +1,18 @@
 ﻿@model IEnumerable<Philosophers.Models.Area>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Areas";
 }
 
-<h2>Index</h2>
+<h2>@ViewBag.Title</h2>
+
 <div>
     @using (Html.BeginForm("Details", "Areas", FormMethod.Get))
     {
-        <p>
+        <div>
             Area: @Html.DropDownList("areaName", "Select an area")
-            <input type="submit" value="filter" />
-        </p>
+            <input type="submit" value="Filter" />
+        </div>
     }
 </div>
 <table class="table">
@@ -19,18 +20,27 @@
         <th>
             @Html.DisplayNameFor(model => model.Name)
         </th>
-        <th>Number of Philosophers</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descrpition)
+        </th>
+        <th>
+            Number of philosophers
+        </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @item.Philosophers.Count()
-        </td>
-    </tr>
-}
+    @foreach (var area in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(a => area.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(a => area.Descrpition)
+            </td>
+            <td>
+                @area.Philosophers.Count
+            </td>
+        </tr>
+    }
 
 </table>
