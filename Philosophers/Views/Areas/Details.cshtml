@@ -6,17 +6,14 @@
 
 <h2>@ViewBag.Title</h2>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-    </tr>
-
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => Model.Name)
-        </td>
-    </tr>
-
-</table>
+@if (Model.Philosophers.Count > 0)
+{
+    foreach (var philosopher in Model.Philosophers)
+    {
+        Html.RenderPartial("_PhilosopherSummary", philosopher);
+    }
+}
+else
+{
+    <h3>No philosphers for this area in the library at the moment</h3>
+}

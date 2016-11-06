@@ -30,7 +30,7 @@ namespace Philosophers.Controllers
             }
             var area = (from a in db.Areas.Include("Philosophers")
                        where a.AreaId == areaName
-                       select a).Single();
+                       select a).SingleOrDefault();
 
             if (area == null)
             {
