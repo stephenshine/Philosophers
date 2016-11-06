@@ -16,7 +16,7 @@ namespace Philosophers.Controllers
         {
             PopulateAreaList();
             var areas = from a in db.Areas
-                        .Include("Philosophers")
+                        .Include("Philosophers").Include("Books")
                         orderby a.Name
                         select a;
 
