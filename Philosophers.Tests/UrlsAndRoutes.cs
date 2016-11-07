@@ -73,9 +73,23 @@ namespace Philosophers.Tests
             return result;
         }
 
+        private void TestRoutFail(string url)
+        {
+            // arrange
+            RouteCollection routes = new RouteCollection();
+            RouteConfig.RegisterRoutes(routes);
+
+            // act
+            RouteData result = routes.GetRouteData(CreateHttpContext(url));
+
+            // assert
+            Assert.IsTrue(result == null || result.Route == null);
+        }
+
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
