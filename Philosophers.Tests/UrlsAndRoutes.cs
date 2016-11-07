@@ -87,8 +87,11 @@ namespace Philosophers.Tests
         }
 
         [TestMethod]
-        public void TestMethod1()
+        public void PhilosopherRoutes()
         {
+            TestRouteMatch("~/", "Philosophers", "Index");
+            TestRouteMatch("~/Philosophers", "Philosophers", "Index");
+            TestRouteMatch("~/Philosophers/Index", "Philosophers", "Index");
 
         }
     }
