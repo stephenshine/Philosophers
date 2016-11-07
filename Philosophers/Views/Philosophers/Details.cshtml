@@ -57,6 +57,10 @@
     <div class="col-md-6">
         <h4>@Html.DisplayNameFor(model => model.Description)</h4>
         <p>@Html.DisplayFor(model => model.Description)</p>
+        @foreach (var book in Model.Books)
+        {
+            <p>@book.Title</p>
+        }
     </div>
 </div>
 

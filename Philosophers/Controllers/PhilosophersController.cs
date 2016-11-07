@@ -26,7 +26,7 @@ namespace Philosophers.Controllers
                 philosophers = philosophers.Where(p => p.LastName.Contains(searchString));
             }
 
-            return View(philosophers);
+            return View(philosophers.OrderBy(p => p.LastName));
         }
 
         public ActionResult Details(string lastName)
@@ -36,7 +36,9 @@ namespace Philosophers.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var philosopher = (from p in db.Philosophers
-                                      .Include("Area").Include("Nationality")
+                                      .Include("Area")
+                                      .Include("Nationality")
+                                      .Include("Books")
                                       where p.LastName == lastName
                                       select p).Single();
             if (philosopher == null)
