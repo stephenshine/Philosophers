@@ -16,7 +16,7 @@ namespace Philosophers.Controllers
         {
             PopulateAreaList();
             var areas = from a in db.Areas
-                        .Include("Philosophers").Include("Books")
+                        .Include("Philosophers")
                         orderby a.Name
                         select a;
 
@@ -30,7 +30,7 @@ namespace Philosophers.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             var area = (from a in db.Areas
-                       .Include("Philosophers").Include("Books")
+                       .Include("Philosophers")
                        where a.Name.Equals(areaName)
                        select a).SingleOrDefault();
 

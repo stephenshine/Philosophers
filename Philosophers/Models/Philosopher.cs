@@ -9,6 +9,7 @@ namespace Philosophers.Models
 {
     public class Philosopher
     {
+        [Key]
         public int PhilosopherID { get; set; }
 
         [Required, Display(Name = "First Name"), StringLength(25, MinimumLength = 3)]
@@ -37,7 +38,6 @@ namespace Philosophers.Models
 
         public virtual Area Area { get; set; }
         public virtual Nationality Nationality { get; set; }
-        public virtual ICollection<Book> Books { get; set; }
 
         [Display(Name ="Full name")]
         public string FullName

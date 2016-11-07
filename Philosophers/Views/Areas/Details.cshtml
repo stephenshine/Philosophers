@@ -18,33 +18,3 @@ else
 {
     <h3>No philosphers for this area in the library at the moment</h3>
 }
-
-@if (Model.Books.Count > 0)
-{
-    <table class="table">
-        <tr>
-            <th>
-                Title
-            </th>
-            <th>
-                Author
-            </th>
-        </tr>
-        @foreach (var book in Model.Books)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(b => book.Title)
-            </td>
-            <td>
-                @book.Philosopher.FullName
-            </td>
-        </tr>
-        }
-    </table>
-}
-
-else
-{
-<h3>No books for this area in the library at the moment</h3>
-}

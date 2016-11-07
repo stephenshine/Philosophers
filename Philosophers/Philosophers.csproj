@@ -129,7 +129,6 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AreasController.cs" />
-    <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\PhilosophersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -152,7 +151,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Area.cs" />
-    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Nationality.cs" />
     <Compile Include="Models\Philosopher.cs" />
     <Compile Include="Models\PhilosopherDBContext.cs" />
@@ -199,11 +197,6 @@
     <Content Include="Views\Shared\_PhilosopherSummary.cshtml" />
     <Content Include="Views\Areas\Details.cshtml" />
     <Content Include="Views\Areas\Index.cshtml" />
-    <Content Include="Views\Books\Create.cshtml" />
-    <Content Include="Views\Books\Delete.cshtml" />
-    <Content Include="Views\Books\Details.cshtml" />
-    <Content Include="Views\Books\Edit.cshtml" />
-    <Content Include="Views\Books\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

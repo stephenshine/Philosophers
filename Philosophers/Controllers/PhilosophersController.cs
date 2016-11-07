@@ -38,7 +38,6 @@ namespace Philosophers.Controllers
             var philosopher = (from p in db.Philosophers
                                       .Include("Area")
                                       .Include("Nationality")
-                                      .Include("Books")
                                       where p.LastName == lastName
                                       select p).Single();
             if (philosopher == null)

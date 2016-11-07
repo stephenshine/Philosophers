@@ -26,9 +26,6 @@
         <th>
             Number of philosophers
         </th>
-        <th>
-            Number of books
-        </th>
     </tr>
 
     @foreach (var area in Model)
@@ -42,9 +39,6 @@
             </td>
             <td>
                 @area.Philosophers.Count
-            </td>
-            <td>
-                @area.Books.Count
             </td>
         </tr>
     }
