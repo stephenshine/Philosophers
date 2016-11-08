@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Web;
 using System.Web.Routing;
 using System.Reflection;
+using Philosophers;
 using Moq;
 
 namespace Philosophers.Tests
@@ -73,7 +74,7 @@ namespace Philosophers.Tests
             return result;
         }
 
-        private void TestRoutFail(string url)
+        private void TestRouteFail(string url)
         {
             // arrange
             RouteCollection routes = new RouteCollection();
@@ -92,7 +93,7 @@ namespace Philosophers.Tests
             TestRouteMatch("~/", "Philosophers", "Index");
             TestRouteMatch("~/Philosophers", "Philosophers", "Index");
             TestRouteMatch("~/Philosophers/Index", "Philosophers", "Index");
-
+            TestRouteMatch("~/Philosophers/Details/Chalmers", "Philosophers", "Details", new { lastName = "Chalmers" });
         }
     }
 }
