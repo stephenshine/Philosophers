@@ -32,7 +32,7 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(a => area.Name)
+                @Html.ActionLink(area.Name, "Details", new { areaName = area.Name })
             </td>
             <td>
                 @Html.DisplayFor(a => area.Description)
