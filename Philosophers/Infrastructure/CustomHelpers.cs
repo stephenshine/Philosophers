@@ -12,9 +12,14 @@ namespace Philosophers.Infrastructure
 
         public static MvcHtmlString PhilosopherData(this HtmlHelper html, Philosopher philosopher)
         {
+            TagBuilder tag = new TagBuilder("dl");
 
+            TagBuilder data = new TagBuilder("dd");
 
-            return new MvcHtmlString();
+            data.SetInnerText(philosopher.Nationality.Name);
+            tag.InnerHtml += data.ToString();
+
+            return new MvcHtmlString(tag.ToString());
         }
     }
 }
