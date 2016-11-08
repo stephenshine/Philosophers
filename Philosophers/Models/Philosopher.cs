@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Philosophers.Models
 {
-    public class Philosopher
+    public partial class Philosopher
     {
         [Key]
         public int PhilosopherID { get; set; }
@@ -39,39 +39,5 @@ namespace Philosophers.Models
 
         public virtual Area Area { get; set; }
         public virtual Nationality Nationality { get; set; }
-
-        [Display(Name ="Full name")]
-        public string FullName
-        {
-            get { return FirstName + " " + LastName; }
-        }
-
-        public string ImgUrl
-        {
-            get { return PhilosopherID + "-" + LastName + ".jpg"; }
-        }
-
-        public int calculateAge()
-        {
-            int age;
-            if (DateOfDeath.HasValue)
-            {
-                age = DateOfDeath.Value.Year - DateOfBirth.Year;
-                if (DateOfDeath.Value < DateOfBirth.AddYears(age))
-                {
-                    age--;
-                }
-            }
-            else
-            {
-                age = DateTime.Now.Year - DateOfBirth.Year;
-                if (DateTime.Now < DateOfBirth.AddYears(age))
-                {
-                    age--;
-                }
-            }
-
-            return age;         
-        }
     }
 }
