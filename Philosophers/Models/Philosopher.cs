@@ -19,11 +19,12 @@ namespace Philosophers.Models
         public string LastName { get; set; }
 
         [Required, Display(Name = "Date of birth"), DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Column(TypeName="datetime2")]
         public DateTime DateOfBirth { get; set; }
 
-        [Display(Name = "Date of death")]
-        [DataType(DataType.Date)]
+        [Display(Name = "Date of death"), DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Column(TypeName = "datetime2")]
         public DateTime? DateOfDeath { get; set; }
 
