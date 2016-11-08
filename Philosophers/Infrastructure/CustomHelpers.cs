@@ -15,7 +15,7 @@ namespace Philosophers.Infrastructure
             TagBuilder tag = new TagBuilder("dl");
 
             TagBuilder data = new TagBuilder("dd");
-
+            
             data.SetInnerText(philosopher.Nationality.Name);
             tag.InnerHtml += data.ToString();
 
