@@ -4,20 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>All philosophers</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Add another philosopher", "Create")
 
     @using (Html.BeginForm("Index", "Philosophers", FormMethod.Get))
     {
         <p> 
-            Name: @Html.TextBox("searchString") <br />
+            Name: @Html.TextBox("searchString")
             <input type="submit" value="Search"/> 
         </p>
     }
 </p>
-<table class="table">
+@*<table class="table">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.FullName)
@@ -68,7 +68,7 @@
             </td>
         </tr>
     }
-</table>
+</table>*@
     
 <div class="row">
     @foreach (var philosopher in Model)
