@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Philosophers.Models.Philosopher>
+@model IEnumerable<Philosophers.Models.Philosopher>
 
 @{
     ViewBag.Title = "Index";
@@ -9,6 +9,11 @@
 <p>
     @Html.ActionLink("Add another philosopher", "Create")
 
+    @*
+    using statement causes form to be disposed when block closed
+    parameters (ActionMethod, Controller, HTTP Method)
+    TextBox passes value called searchString which matches parameter in Index ActionMethod
+    *@
     @using (Html.BeginForm("Index", "Philosophers", FormMethod.Get))
     {
         <p> 
