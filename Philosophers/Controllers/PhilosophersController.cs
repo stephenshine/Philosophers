@@ -70,13 +70,17 @@ namespace Philosophers.Controllers
             return View(philosopher);
         }
 
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string lastName)
         {
-            if (id == null)
+            if (lastName == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Philosopher philosopher = db.Philosophers.Find(id);
+            var philosopher = (from p in db.Philosophers
+                                      .Include("Area")
+                                      .Include("Nationality")
+                                       where p.LastName == lastName
+                                       select p).Single();
             if (philosopher == null)
             {
                 return HttpNotFound();
@@ -99,13 +103,17 @@ namespace Philosophers.Controllers
             return View(philosopher);
         }
 
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string lastName)
         {
-            if (id == null)
+            if (lastName == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Philosopher philosopher = db.Philosophers.Find(id);
+            var philosopher = (from p in db.Philosophers
+                                      .Include("Area")
+                                      .Include("Nationality")
+                                       where p.LastName == lastName
+                                       select p).Single();
             if (philosopher == null)
             {
                 return HttpNotFound();
@@ -115,9 +123,13 @@ namespace Philosophers.Controllers
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string lastName)
         {
-            Philosopher philosopher = db.Philosophers.Find(id);
+            Philosopher philosopher = (from p in db.Philosophers
+                                      .Include("Area")
+                                      .Include("Nationality")
+                                       where p.LastName == lastName
+                                       select p).Single();
             db.Philosophers.Remove(philosopher);
             db.SaveChanges();
             return RedirectToAction("Index");

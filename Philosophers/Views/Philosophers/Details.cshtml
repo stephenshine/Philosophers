@@ -57,8 +57,8 @@
         <h4>@Html.DisplayNameFor(m => m.Description)</h4>
         <p>@Html.DisplayFor(m => m.Description)</p>
         <p>
-            @Html.ActionLink("Edit", "Edit", new { id = Model.PhilosopherID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = Model.PhilosopherID }) |
+            @Html.ActionLink("Edit", "Edit", new { lastName = Model.LastName }) |
+            @Html.ActionLink("Delete", "Delete", new { lastName = Model.LastName }) |
             @Html.ActionLink("Back to Philosophers", "Index")
         </p>
     </div>

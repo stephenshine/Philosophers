@@ -13,11 +13,11 @@ namespace Philosophers
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: "Details",
-                url: "Philosphers/Details/{lastName}",
-                defaults: new { controller = "Philosophers", action = "Details", lastName = UrlParameter.Optional }
-            );
+            //routes.MapRoute(
+            //    name: "Details",
+            //    url: "Philosphers/{action}/{lastName}",
+            //    defaults: new { controller = "Philosophers", action = "Index", lastName = UrlParameter.Optional }
+            //);
 
             routes.MapRoute(
                 name: "Areas",
@@ -27,8 +27,8 @@ namespace Philosophers
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Philosophers", action = "Index", id = UrlParameter.Optional }
+                url: "{controller}/{action}/{lastName}",
+                defaults: new { controller = "Philosophers", action = "Index", lastName = UrlParameter.Optional }
             );
         }
     }
