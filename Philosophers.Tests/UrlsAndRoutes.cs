@@ -39,7 +39,7 @@ namespace Philosophers.Tests
         {
             // arrange
             RouteCollection routes = new RouteCollection();
-            RouteConfig.RegisterRoutes(routes);
+            Philosophers.RouteConfig.RegisterRoutes(routes);
 
             // act
             RouteData result = routes.GetRouteData(CreateHttpContext(url, httpMethod));
@@ -78,7 +78,7 @@ namespace Philosophers.Tests
         {
             // arrange
             RouteCollection routes = new RouteCollection();
-            RouteConfig.RegisterRoutes(routes);
+            Philosophers.RouteConfig.RegisterRoutes(routes);
 
             // act
             RouteData result = routes.GetRouteData(CreateHttpContext(url));
