@@ -6,15 +6,6 @@
 
 <h2>@ViewBag.Title</h2>
 
-<div>
-    @using (Html.BeginForm("Details", "Areas", FormMethod.Get))
-    {
-        <div>
-            Area: @Html.DropDownList("areaName", "Select an area")
-            <input type="submit" value="Filter" />
-        </div>
-    }
-</div>
 <table class="table">
     <tr>
         <th>
