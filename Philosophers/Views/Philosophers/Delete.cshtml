@@ -8,46 +8,46 @@
 <div>
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.DateOfBirth)
+            @Html.DisplayNameFor(m => m.DateOfBirth)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.DateOfBirth)
+            @Html.DisplayFor(m => m.DateOfBirth)
         </dd>
 
         @if (Model.DateOfDeath.HasValue)
         {
             <dt>
-                @Html.DisplayNameFor(model => model.DateOfDeath)
+                @Html.DisplayNameFor(m => m.DateOfDeath)
             </dt>
 
             <dd>
-                @Html.DisplayFor(model => model.DateOfDeath)
+                @Html.DisplayFor(m => m.DateOfDeath)
             </dd>
         }
 
         <dt>
-            @Html.DisplayNameFor(model => model.Area)
+            @Html.DisplayNameFor(m => m.Area)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Area.Name)
+            @Html.DisplayFor(m => m.Area.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nationality)
+            @Html.DisplayNameFor(m => m.Nationality)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nationality.Name)
+            @Html.DisplayFor(m => m.Nationality.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(m => m.Description)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(m => m.Description)
         </dd>
 
     </dl>
@@ -57,7 +57,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to philosopher", "Details", new { lastName = Model.LastName })
+            @Html.ActionLink("Back to Philosopher", "Details", new { lastName = Model.LastName })
         </div>
     }
 </div>
