@@ -18,7 +18,7 @@ namespace Philosophers.Models
         [Required, Display(Name = "Last Name"), StringLength(30, MinimumLength = 4)]
         public string LastName { get; set; }
 
-        [Required, Display(Name = "Date of birth"), DataType(DataType.Date)]
+        [Required(ErrorMessage = "A date of birth is required"), Display(Name = "Date of birth"), DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         [Column(TypeName="datetime2")]
         public DateTime DateOfBirth { get; set; }
@@ -28,10 +28,10 @@ namespace Philosophers.Models
         [Column(TypeName = "datetime2")]
         public DateTime? DateOfDeath { get; set; }
 
-        [Required, Display(Name = "Area")]
+        [Required(ErrorMessage = "An Area is required"), Display(Name = "Area"),]
         public int AreaID { get; set; }
 
-        [Required, Display(Name = "Nationality")]
+        [Required(ErrorMessage = "A Nationality is required"), Display(Name = "Nationality")]
         public int NationalityID { get; set; }
 
         [Required, StringLength(500, MinimumLength = 20)]
