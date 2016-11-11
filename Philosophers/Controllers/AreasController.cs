@@ -12,7 +12,7 @@ namespace Philosophers.Controllers
     {
         PhilosopherDBContext db = new PhilosopherDBContext();
 
-        public ActionResult Index()
+        public ViewResult Index()
         {
             var areas = from a in db.Areas
                         .Include("Philosophers")
