@@ -133,7 +133,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Infrastructure\CustomHelpers.cs" />
     <Compile Include="Migrations\201611022109051_Initial.cs" />
     <Compile Include="Migrations\201611022109051_Initial.Designer.cs">
       <DependentUpon>201611022109051_Initial.cs</DependentUpon>
@@ -200,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Infrastructure\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
