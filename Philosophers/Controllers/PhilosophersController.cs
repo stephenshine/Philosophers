@@ -7,18 +7,25 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Philosophers.Models;
+using Philosophers.Models.Abstract;
 
 namespace Philosophers.Controllers
 {
     public class PhilosophersController : Controller
     {
+
+        private IPhilosopherRepository repository;
+
+        public PhilosophersController(IPhilosopherRepository philosopherRepository)
+        {
+            repository = philosopherRepository;
+        }
+
         private PhilosopherDBContext db = new PhilosopherDBContext();
 
         public ActionResult Index(string searchString)
         {
-            var philosophers = from p in db.Philosophers
-                               .Include("Area")
-                               .Include("Nationality")
+            var philosophers = from p in repository.Philosophers
                                select p;
 
             if (!String.IsNullOrEmpty(searchString))
@@ -35,9 +42,7 @@ namespace Philosophers.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var philosopher = (from p in db.Philosophers
-                                      .Include("Area")
-                                      .Include("Nationality")
+            var philosopher = (from p in repository.Philosophers
                                       where p.LastName == lastName
                                       select p).Single();
             if (philosopher == null)
@@ -60,8 +65,9 @@ namespace Philosophers.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Philosophers.Add(philosopher);
-                db.SaveChanges();
+                repository.AddPhilosopher(philosopher);
+                //db.Philosophers.Add(philosopher);
+                //db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -76,9 +82,7 @@ namespace Philosophers.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var philosopher = (from p in db.Philosophers
-                                      .Include("Area")
-                                      .Include("Nationality")
+            var philosopher = (from p in repository.Philosophers
                                        where p.LastName == lastName
                                        select p).Single();
             if (philosopher == null)
@@ -109,9 +113,7 @@ namespace Philosophers.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            var philosopher = (from p in db.Philosophers
-                                      .Include("Area")
-                                      .Include("Nationality")
+            var philosopher = (from p in repository.Philosophers
                                        where p.LastName == lastName
                                        select p).Single();
             if (philosopher == null)
@@ -125,9 +127,7 @@ namespace Philosophers.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string lastName)
         {
-            Philosopher philosopher = (from p in db.Philosophers
-                                      .Include("Area")
-                                      .Include("Nationality")
+            Philosopher philosopher = (from p in repository.Philosophers
                                        where p.LastName == lastName
                                        select p).Single();
             db.Philosophers.Remove(philosopher);
@@ -142,7 +142,7 @@ namespace Philosophers.Controllers
         {
 
             // LINQ query to get all areas from table
-            var areaQuery = from a in db.Areas
+            var areaQuery = from a in repository.Areas
                             orderby a.Name
                             select a;
 
@@ -152,7 +152,7 @@ namespace Philosophers.Controllers
 
         private void PopulateNationalityList(object selectedNationality = null)
         {
-            var nationalityQuery = from n in db.Nationalities
+            var nationalityQuery = from n in repository.Nationalities
                                    orderby n.Name
                                    select n;
 
