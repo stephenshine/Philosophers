@@ -1,10 +1,10 @@
 ﻿@model Philosophers.Models.Philosopher
 
-<div class="col-md-4">
-    <h4>@Html.ActionLink(Model.FullName, "Details", "Philosophers", new { lastName = Model.LastName }, null)</h4>
+<figure class="figure">
     <a href="@Url.Action("Details", "Philosophers", new { lastName = Model.LastName })">
         <img src="~/Content/Images/@Model.ImgUrl"
-             alt="No image found"
-             class="img-responsive philosopher" />
+                alt="No image found"
+                class="img-thumbnail philosopher" />
     </a>
-</div>
+    <figcaption>@Html.ActionLink(Model.FullName, "Details", "Philosophers", new { lastName = Model.LastName }, null)</figcaption>
+</figure>
