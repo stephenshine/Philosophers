@@ -94,7 +94,7 @@ namespace Philosophers.Tests
             TestRouteMatch("~/Philosophers", "Philosophers", "Index");
             TestRouteMatch("~/Philosophers/Index", "Philosophers", "Index");
             TestRouteMatch("~/Philosophers/Details/Test", "Philosophers", "Details", new { lastName = "Test" });
-            TestRouteFail("~/Philosophers/Details/Test/Test");
+            TestRouteFail("~/Philosophers/Details");
         }
 
         [TestMethod]
@@ -103,7 +103,7 @@ namespace Philosophers.Tests
             TestRouteMatch("~/Areas", "Areas", "Index");
             TestRouteMatch("~/Areas/Index", "Areas", "Index");
             TestRouteMatch("~/Areas/Details/Test", "Areas", "Details", new { areaName = "Test" });
-            TestRouteFail("~/Areas/Details/Test/Test");
+            TestRouteFail("~/Areas/Details");
         }
     }
 }
