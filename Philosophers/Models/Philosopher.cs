@@ -28,7 +28,7 @@ namespace Philosophers.Models
         [Column(TypeName = "datetime2")]
         public DateTime? DateOfDeath { get; set; }
 
-        [Required(ErrorMessage = "An Area is required"), Display(Name = "Area"),]
+        [Required(ErrorMessage = "An Area is required"), Display(Name = "Area")]
         public int AreaID { get; set; }
 
         [Required(ErrorMessage = "A Nationality is required"), Display(Name = "Nationality")]
