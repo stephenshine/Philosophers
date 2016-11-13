@@ -91,7 +91,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="AreaTests.cs" />
+    <Compile Include="PhilosopherTests.cs" />
     <Compile Include="UrlsAndRoutes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
