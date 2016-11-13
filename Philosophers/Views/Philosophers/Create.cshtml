@@ -1,13 +1,17 @@
 ﻿@model Philosophers.Models.Philosopher
 
 @{
-    ViewBag.Title = "New";
+    ViewBag.Title = "New Philosopher";
 }
 
-<h2>Add a new philosopher</h2>
+<h2>@ViewBag.Title</h2>
 
+@using (Html.BeginForm())
+{
+    Html.RenderPartial("_PhilosopherForm", Model);
+}
 
-@using (Html.BeginForm()) 
+@*@using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
@@ -76,7 +80,7 @@
             </div>
         </div>
     </div>
-}
+}*@
 
 <div>
     @Html.ActionLink("Back to All Philosophers", "Index")
