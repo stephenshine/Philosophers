@@ -93,7 +93,17 @@ namespace Philosophers.Tests
             TestRouteMatch("~/", "Philosophers", "Index");
             TestRouteMatch("~/Philosophers", "Philosophers", "Index");
             TestRouteMatch("~/Philosophers/Index", "Philosophers", "Index");
-            TestRouteMatch("~/Philosophers/Details/Chalmers", "Philosophers", "Details", new { lastName = "Chalmers" });
+            TestRouteMatch("~/Philosophers/Details/Test", "Philosophers", "Details", new { lastName = "Test" });
+            TestRouteFail("~/Philosophers/Details");
+        }
+
+        [TestMethod]
+        public void AreaRoutes()
+        {
+            TestRouteMatch("~/Areas", "Areas", "Index");
+            TestRouteMatch("~/Areas/Index", "Areas", "Index");
+            TestRouteMatch("~/Areas/Details/Test", "Areas", "Details", new { areaName = "Test" });
+            TestRouteFail("~/Areas/Details");
         }
     }
 }
