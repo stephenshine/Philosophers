@@ -19,12 +19,12 @@ namespace Philosophers.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "A date of birth is required"), Display(Name = "Date of birth"), DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Column(TypeName="datetime2")]
         public DateTime DateOfBirth { get; set; }
 
         [Display(Name = "Date of death"), DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [Column(TypeName = "datetime2")]
         public DateTime? DateOfDeath { get; set; }
 
@@ -34,7 +34,7 @@ namespace Philosophers.Models
         [Required(ErrorMessage = "A Nationality is required"), Display(Name = "Nationality")]
         public int NationalityID { get; set; }
 
-        [Required, StringLength(500, MinimumLength = 20)]
+        [Required(ErrorMessage = "You must include a description"), StringLength(1000, MinimumLength = 20, ErrorMessage = "The description must be between 20 and 1000 characters long")]
         public string Description { get; set; }
 
         public virtual Area Area { get; set; }
