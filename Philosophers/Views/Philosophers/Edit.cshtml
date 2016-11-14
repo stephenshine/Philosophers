@@ -7,7 +7,7 @@
 <h2>@ViewBag.Title</h2>
 
 
-@using (Html.BeginForm("Details", "Philosophers", new { lastName = Model.LastName }, FormMethod.Post, null))
+@using (Html.BeginForm("Edit", "Philosophers", new { lastName = Model.LastName }, FormMethod.Post, null))
 {
     Html.RenderPartial("_PhilosopherForm", Model);
 }

@@ -65,8 +65,8 @@ namespace Philosophers.Controllers
                 return RedirectToAction("Index");
             }
 
-            PopulateAreaList(philosopher.AreaID);
-            PopulateNationalityList(philosopher.NationalityID);
+            //PopulateAreaList(philosopher.AreaID);
+            //PopulateNationalityList(philosopher.NationalityID);
             return View(philosopher);
         }
 
@@ -76,15 +76,18 @@ namespace Philosophers.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             var philosopher = (from p in db.Philosophers
                                       .Include("Area")
                                       .Include("Nationality")
                                        where p.LastName == lastName
                                        select p).Single();
+
             if (philosopher == null)
             {
                 return HttpNotFound();
             }
+
             PopulateAreaList(philosopher.AreaID);
             PopulateNationalityList(philosopher.NationalityID);
             return View(philosopher);
@@ -98,7 +101,7 @@ namespace Philosophers.Controllers
             {
                 db.Entry(philosopher).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", new { lastName = philosopher.LastName });
             }
             return View(philosopher);
         }
