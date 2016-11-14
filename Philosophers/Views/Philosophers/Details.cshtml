@@ -56,10 +56,10 @@
     <div class="col-md-6">
         <h4>@Html.DisplayNameFor(m => m.Description)</h4>
         <p>@Html.DisplayFor(m => m.Description)</p>
-        <p>
-            @Html.ActionLink("Edit", "Edit", new { lastName = Model.LastName }) |
-            @Html.ActionLink("Delete", "Delete", new { lastName = Model.LastName }) |
-            @Html.ActionLink("Back to Philosophers", "Index")
-        </p>
+        <div class="form-actions no-color">
+            @Html.ActionLink("Edit", "Edit", new { lastName = Model.LastName }, new { @class = "btn btn-default" })
+            @Html.ActionLink("Delete", "Delete", new { lastName = Model.LastName }, new { @class = "btn btn-default" })
+            @Html.ActionLink("Back to Philosophers", "Index", null, new { @class = "btn btn-default" })
+         </div>
     </div>
 </div>
