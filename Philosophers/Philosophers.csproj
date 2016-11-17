@@ -129,7 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AreasController.cs" />
-    <Compile Include="Controllers\InformationController.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\PhilosophersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -188,7 +188,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Information\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Philosophers\Create.cshtml" />
     <Content Include="Views\Philosophers\Delete.cshtml" />
     <Content Include="Views\Philosophers\Details.cshtml" />

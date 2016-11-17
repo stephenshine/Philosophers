@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Philosophers.Controllers
 {
-    public class InformationController : Controller
+    public class AboutController : Controller
     {
         public ActionResult Index()
         {
