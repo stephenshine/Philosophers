@@ -5,7 +5,7 @@
         <a href="@Url.Action("Details", "Philosophers", new { lastName = Model.LastName })">
             <img src="~/Content/Images/@Model.ImgUrl"
                  alt="No image found"
-                 class="img-responsive philosopher" />
+                 class="img-responsive philosopher-summary" />
         </a>
     </div>
     <h4>@Html.ActionLink(Model.FullName, "Details", "Philosophers", new { lastName = Model.LastName }, null)</h4>

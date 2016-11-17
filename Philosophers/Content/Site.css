@@ -23,7 +23,7 @@ textarea {
     max-width: 280px;
 }
 
-.philosopher {
+.philosopher-summary {
     position: relative;
     float: left;
     width:  250px;
@@ -31,4 +31,10 @@ textarea {
     background-position: 50% 50%;
     background-repeat:   no-repeat;
     background-size:     cover;
+}
+
+.philosopher-details 
+{
+    width: 350px;
+    height: 350px;
 }
