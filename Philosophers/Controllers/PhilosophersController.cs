@@ -58,6 +58,7 @@ namespace Philosophers.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,NationalityID,Description")] Philosopher philosopher)
         {
+            ModelState.Remove("PhilosopherID");
             if (ModelState.IsValid)
             {
                 db.Philosophers.Add(philosopher);
@@ -65,8 +66,14 @@ namespace Philosophers.Controllers
                 return RedirectToAction("Index");
             }
 
-            //PopulateAreaList(philosopher.AreaID);
-            //PopulateNationalityList(philosopher.NationalityID);
+            // Temporary code for investigating ModelState errors
+            //var errors = ModelState
+            //    .Where(x => x.Value.Errors.Count > 0)
+            //    .Select(x => new { x.Key, x.Value.Errors })
+            //    .ToArray();
+
+            PopulateAreaList(philosopher.AreaID);
+            PopulateNationalityList(philosopher.NationalityID);
             return View(philosopher);
         }
 

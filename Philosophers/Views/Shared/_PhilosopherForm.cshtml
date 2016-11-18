@@ -42,7 +42,7 @@
     <div class="form-group">
         @Html.LabelFor(m => m.AreaID, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownList("AreaID", String.Empty)
+            @Html.DropDownList("AreaID", "Select an area")
             @Html.ValidationMessageFor(m => m.AreaID, "", new { @class = "text-danger" })
         </div>
     </div>
@@ -50,7 +50,7 @@
     <div class="form-group">
         @Html.LabelFor(m => m.NationalityID, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.DropDownList("NationalityID", String.Empty)
+            @Html.DropDownList("NationalityID", "Select a nationality")
             @Html.ValidationMessageFor(m => m.NationalityID, "", new { @class = "text-danger" })
         </div>
     </div>
