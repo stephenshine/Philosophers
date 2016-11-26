@@ -56,7 +56,7 @@ namespace Philosophers.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,NationalityID,Description")] Philosopher philosopher)
+        public ActionResult Create([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,ImgURL,AreaID,NationalityID,Description")] Philosopher philosopher)
         {
             ModelState.Remove("PhilosopherID");
             if (ModelState.IsValid)
@@ -102,7 +102,7 @@ namespace Philosophers.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,AreaID,NationalityID,Description")] Philosopher philosopher)
+        public ActionResult Edit([Bind(Include = "PhilosopherID,FirstName,LastName,DateOfBirth,DateOfDeath,ImgURL,AreaID,NationalityID,Description")] Philosopher philosopher)
         {
             if (ModelState.IsValid)
             {

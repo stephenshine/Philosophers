@@ -15,11 +15,6 @@ namespace Philosophers.Models
             get { return FirstName + " " + LastName; }
         }
 
-        //public string ImgUrl
-        //{
-        //    get { return PhilosopherID + "-" + LastName + ".jpg"; }
-        //}
-
         public int calculateAge()
         {
             int age;
