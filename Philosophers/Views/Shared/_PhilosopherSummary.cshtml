@@ -3,7 +3,7 @@
 <div class="col-sm-4">
     <div class="clearfix">
         <a href="@Url.Action("Details", "Philosophers", new { lastName = Model.LastName })">
-            <img src="~/Content/Images/@Model.ImgUrl"
+            <img src="@Url.Content(Model.ImgURL)"
                  alt="No image found"
                  class="img-responsive philosopher-summary" />
         </a>

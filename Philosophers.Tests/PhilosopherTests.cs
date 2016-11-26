@@ -41,15 +41,15 @@ namespace Philosophers.Tests
             Assert.AreEqual("Test One", result);
         }
 
-        [TestMethod]
-        public void PhilosopherImageURL()
-        {
-            // Act
-            var result = target1.ImgUrl;
+        //[TestMethod]
+        //public void PhilosopherImageURL()
+        //{
+        //    // Act
+        //    var result = target1.ImgUrl;
 
-            // Assert
-            Assert.AreEqual("1-One.jpg", result);
-        }
+        //    // Assert
+        //    Assert.AreEqual("1-One.jpg", result);
+        //}
 
         [TestMethod]
         public void PhilosopherAgeWhenDead()

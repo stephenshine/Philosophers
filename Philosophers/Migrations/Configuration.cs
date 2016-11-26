@@ -25,7 +25,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("1970-02-02"),
                     NationalityID = 1,
                     AreaID = 1,
-                    Description = "Here's some text about Bertrand Russell"
+                    Description = "Here's some text about Bertrand Russell",
+                    ImgURL = "~/Content/Images/1-Russell.jpg"
                 },
                 new Philosopher
                 {
@@ -35,7 +36,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("1804-02-12"),
                     NationalityID = 3,
                     AreaID = 2,
-                    Description = "Here's some text about Immanuel Kant"
+                    Description = "Here's some text about Immanuel Kant",
+                    ImgURL = "~/Content/Images/2-Kant.jpg"
                 },
                 new Philosopher
                 {
@@ -45,7 +47,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("2002-11-24"),
                     NationalityID = 9,
                     AreaID = 3,
-                    Description = "Here's some text about John Rawls"
+                    Description = "Here's some text about John Rawls",
+                    ImgURL = "~/Content/Images/3-Rawls.jpg"
                 },
                 new Philosopher
                 {
@@ -55,7 +58,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("1650-02-11"),
                     NationalityID = 4,
                     AreaID = 2,
-                    Description = "Here's some text about Rene Descartes"
+                    Description = "Here's some text about Rene Descartes",
+                    ImgURL = "~/Content/Images/4-Descartes.jpg"
                 },
                 new Philosopher
                 {
@@ -64,7 +68,8 @@ namespace Philosophers.Migrations
                     DateOfBirth = DateTime.Parse("1966-04-20"),
                     NationalityID = 10,
                     AreaID = 5,
-                    Description = "Here's some text about David Chalmers"
+                    Description = "Here's some text about David Chalmers",
+                    ImgURL = "~/Content/Images/5-Chalmers.jpg"
                 },
                 new Philosopher 
                 {
@@ -74,7 +79,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("1704-10-28"),
                     NationalityID = 1,
                     AreaID = 2,
-                    Description = "Here's some text about John Locke"
+                    Description = "Here's some text about John Locke",
+                    ImgURL = "~/Content/Images/6-Locke.jpg"
                 },
                 new Philosopher
                 {
@@ -84,7 +90,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("1980-04-15"),
                     NationalityID = 4,
                     AreaID = 4,
-                    Description = "Here's some text about John-Paul Sartre"
+                    Description = "Here's some text about John-Paul Sartre",
+                    ImgURL = "~/Content/Images/7-Sartre.jpg"
                 },
                 new Philosopher
                 {
@@ -94,7 +101,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("1670-12-04"),
                     NationalityID = 1,
                     AreaID = 3,
-                    Description = "Here's some text about Thomas Hobbes"
+                    Description = "Here's some text about Thomas Hobbes",
+                    ImgURL = "~/Content/Images/8-Hobbes.jpg"
                 },
                 new Philosopher
                 {
@@ -104,7 +112,8 @@ namespace Philosophers.Migrations
                     DateOfDeath = DateTime.Parse("1900-08-25"),
                     NationalityID = 8,
                     AreaID = 2,
-                    Description = "Here's some text about Friedrich Nietzsche"
+                    Description = "Here's some text about Friedrich Nietzsche",
+                    ImgURL = "~/Content/Images/9-Nietzsche.jpg"
                 }
                 );
 

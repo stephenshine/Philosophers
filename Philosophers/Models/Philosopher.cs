@@ -36,6 +36,7 @@ namespace Philosophers.Models
 
         [Required(ErrorMessage = "You must include a description"), StringLength(1000, MinimumLength = 20, ErrorMessage = "The description must be between 20 and 1000 characters long")]
         public string Description { get; set; }
+        public string ImgURL { get; set; }
 
         public virtual Area Area { get; set; }
         public virtual Nationality Nationality { get; set; }
