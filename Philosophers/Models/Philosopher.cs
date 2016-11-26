@@ -28,6 +28,9 @@ namespace Philosophers.Models
         [Column(TypeName = "datetime2")]
         public DateTime? DateOfDeath { get; set; }
 
+        [Required(ErrorMessage = "You must include and image URL")]
+        public string ImgURL { get; set; }
+
         [Required(ErrorMessage = "An Area is required"), Display(Name = "Area")]
         public int AreaID { get; set; }
 
@@ -36,9 +39,6 @@ namespace Philosophers.Models
 
         [Required(ErrorMessage = "You must include a description"), StringLength(1000, MinimumLength = 20, ErrorMessage = "The description must be between 20 and 1000 characters long")]
         public string Description { get; set; }
-
-        [Required(ErrorMessage = "You must include and image URL")]
-        public string ImgURL { get; set; }
 
         public virtual Area Area { get; set; }
         public virtual Nationality Nationality { get; set; }
