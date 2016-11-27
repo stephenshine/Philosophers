@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: rgba(235, 197, 45, 0.4);
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -37,4 +38,14 @@ textarea {
 {
     width: 350px;
     height: 350px;
+}
+
+.navbar
+{
+    background-color: rgb(164, 157, 26);
+}
+
+.row .well 
+{
+    background-color: rgba(164, 157, 26, 0.2);
 }
