@@ -11,12 +11,7 @@
         <p>@Html.ActionLink("Add another Philosopher", "Create")</p>
     </div>
 
-        @*
-            using statement causes form to be disposed when block closed
-            parameters (ActionMethod, Controller, HTTP Method)
-            TextBox passes value called searchString which matches parameter in Index ActionMethod
-        *@
-    <div class="col-sm-6">
+    <div class="col-sm-6" id="searchbox">
         @using (Html.BeginForm("Index", "Philosophers", FormMethod.Get))
     {
         <p>

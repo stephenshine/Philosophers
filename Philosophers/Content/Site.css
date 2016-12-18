@@ -40,14 +40,42 @@ textarea {
     height: 350px;
 }
 
-/*
-.navbar
-{
-    background-color: rgb(164, 157, 26);
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  color: #000000;
 }
 
-.row .well 
-{
-    background-color: rgba(164, 157, 26, 0.2);
+.navbar .navbar-collapse {
+  text-align: center;
 }
- */
+
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    float:none;
+}
+
+.heading-bar {
+    background-color: #c0a253;
+    border-color: #c0a253;
+}
+
+.navbar-inverse .navbar-collapse {
+    border-color: #c0a253;
+}
+
+#searchbox {
+
+}
+
+#heading {
+    color: #555555;
+    font-size: 25px;
+}
