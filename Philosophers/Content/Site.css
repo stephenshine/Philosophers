@@ -46,6 +46,16 @@ textarea {
     text-align: center;
 }
 
+.navbar-default {
+    background-color: #c0a253;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
 .navbar .navbar-collapse {
   text-align: center;
 }
@@ -63,10 +73,6 @@ textarea {
 
 .heading-bar {
     background-color: #c0a253;
-    border-color: #c0a253;
-}
-
-.navbar-inverse .navbar-collapse {
     border-color: #c0a253;
 }
 
