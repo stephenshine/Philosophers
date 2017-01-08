@@ -81,3 +81,14 @@ textarea {
     width: 350px;
     height: 350px;
 }
+
+a {
+    color: #808080;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #C0A253;
+    text-decoration: none;
+}
