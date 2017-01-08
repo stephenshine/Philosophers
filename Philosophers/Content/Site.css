@@ -67,3 +67,17 @@ textarea {
     color: #808080;
     background-color: transparent;
 }
+
+/*Buttons*/
+.btn-default {
+    background-color: #C0A253;
+    border-color: #C0A253;
+    color: #FFFFFF;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active {
+    background-color: #A08233;
+    color: #FFFFFF;
+}
