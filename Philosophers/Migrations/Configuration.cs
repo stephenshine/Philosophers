@@ -26,7 +26,7 @@ namespace Philosophers.Migrations
                     NationalityID = 1,
                     AreaID = 1,
                     Description = "Here's some text about Bertrand Russell",
-                    ImgURL = "~/Content/Images/1-Russell.jpg"
+                    ImgURL = "http://atheistfoundation.org.au/assets/Bertrand_Russell.jpg"
                 },
                 new Philosopher
                 {
@@ -37,7 +37,7 @@ namespace Philosophers.Migrations
                     NationalityID = 3,
                     AreaID = 2,
                     Description = "Here's some text about Immanuel Kant",
-                    ImgURL = "~/Content/Images/2-Kant.jpg"
+                    ImgURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Immanuel_Kant_(painted_portrait).jpg/220px-Immanuel_Kant_(painted_portrait).jpg"
                 },
                 new Philosopher
                 {
@@ -48,7 +48,7 @@ namespace Philosophers.Migrations
                     NationalityID = 9,
                     AreaID = 3,
                     Description = "Here's some text about John Rawls",
-                    ImgURL = "~/Content/Images/3-Rawls.jpg"
+                    ImgURL = "https://upload.wikimedia.org/wikipedia/en/3/3d/John_Rawls.jpg"
                 },
                 new Philosopher
                 {
@@ -59,7 +59,7 @@ namespace Philosophers.Migrations
                     NationalityID = 4,
                     AreaID = 2,
                     Description = "Here's some text about Rene Descartes",
-                    ImgURL = "~/Content/Images/4-Descartes.jpg"
+                    ImgURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg/240px-Frans_Hals_-_Portret_van_Ren%C3%A9_Descartes.jpg"
                 },
                 new Philosopher
                 {
@@ -69,7 +69,7 @@ namespace Philosophers.Migrations
                     NationalityID = 10,
                     AreaID = 5,
                     Description = "Here's some text about David Chalmers",
-                    ImgURL = "~/Content/Images/5-Chalmers.jpg"
+                    ImgURL = "https://pi.tedcdn.com/r/pe.tedcdn.com/images/ted/fdb78c60dfa7d88ebab44c5bc169ca34fae90b0b_254x191.jpg?"
                 },
                 new Philosopher 
                 {
@@ -80,7 +80,7 @@ namespace Philosophers.Migrations
                     NationalityID = 1,
                     AreaID = 2,
                     Description = "Here's some text about John Locke",
-                    ImgURL = "~/Content/Images/6-Locke.jpg"
+                    ImgURL = "https://s-media-cache-ak0.pinimg.com/originals/12/b3/37/12b3376971e38954f462bac84b23cf12.jpg"
                 },
                 new Philosopher
                 {
@@ -91,7 +91,7 @@ namespace Philosophers.Migrations
                     NationalityID = 4,
                     AreaID = 4,
                     Description = "Here's some text about John-Paul Sartre",
-                    ImgURL = "~/Content/Images/7-Sartre.jpg"
+                    ImgURL = "https://upload.wikimedia.org/wikipedia/commons/e/e9/Jean_Paul_Sartre_1965.jpg"
                 },
                 new Philosopher
                 {
@@ -102,7 +102,7 @@ namespace Philosophers.Migrations
                     NationalityID = 1,
                     AreaID = 3,
                     Description = "Here's some text about Thomas Hobbes",
-                    ImgURL = "~/Content/Images/8-Hobbes.jpg"
+                    ImgURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Thomas_Hobbes_(portrait).jpg/220px-Thomas_Hobbes_(portrait).jpg"
                 },
                 new Philosopher
                 {
@@ -113,7 +113,7 @@ namespace Philosophers.Migrations
                     NationalityID = 8,
                     AreaID = 2,
                     Description = "Here's some text about Friedrich Nietzsche",
-                    ImgURL = "~/Content/Images/9-Nietzsche.jpg"
+                    ImgURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Nietzsche187a.jpg/220px-Nietzsche187a.jpg"
                 }
                 );
 
