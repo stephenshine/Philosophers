@@ -1,12 +1,20 @@
 ﻿@model Philosophers.Models.Philosopher
 
-<div class="col-sm-6 col-md-4">
+<div class="col-xs-12 col-sm-6 col-md-4">
     <div class="jumbotron">
-        <a href="@Url.Action("Details", "Philosophers", new { lastName = Model.LastName })">
-            <img src="@Url.Content(Model.ImgURL)"
-                 alt="No image found"
-                 class="img-responsive img-thumbnail philosopher-summary " />
-        </a>
-        <h4 class="text-center">@Html.ActionLink(Model.FullName, "Details", "Philosophers", new { lastName = Model.LastName }, null)</h4>
+        <div class="container">
+            <div class="row">
+                <a href="@Url.Action("Details", "Philosophers", new { lastName = Model.LastName })">
+                    <img src="@Url.Content(Model.ImgURL)"
+                            alt="No image found"
+                            class="img-responsive img-thumbnail philosopher-summary" />
+                </a>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h4 class="text-center">@Html.ActionLink(Model.FullName, "Details", "Philosophers", new { lastName = Model.LastName }, null)</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
